@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>競馬AI観察室 | AI予想の得意・苦手を検証するラボ</title>
+    <meta name="description" content="競馬予想をAIで比較し、人気馬偏重、期待値、回収率、外れ方まで記録する共同検証サイト。稼ぐためではなく、AIごとの得意・苦手を観察します。" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="theme-color" content="#17233f" />
+    <link rel="canonical" href="https://race-iq-ai.pages.dev/" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="site.webmanifest" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="競馬AI観察室" />
+    <meta property="og:title" content="競馬AI観察室 | AI予想の得意・苦手を検証するラボ" />
+    <meta property="og:description" content="AI予想を比較し、期待値・回収率・外れ方までレースごとに記録する競馬AI観察ラボ。" />
+    <meta property="og:url" content="https://race-iq-ai.pages.dev/" />
+    <meta property="og:image" content="https://race-iq-ai.pages.dev/assets/og-race-ai.webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="競馬AI観察室" />
+    <meta name="twitter:description" content="競馬予想AIの得意・苦手を、期待値・回収率・外れ方まで観察するサイト。" />
+    <meta name="twitter:image" content="https://race-iq-ai.pages.dev/assets/og-race-ai.webp" />
+    <link rel="preload" as="image" href="assets/hero-race-1200.webp" imagesrcset="assets/hero-race-800.webp 800w, assets/hero-race-1200.webp 1200w" imagesizes="(max-width: 720px) 100vw, 48vw" />
+    <link rel="preconnect" href="https://unpkg.com" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script defer src="app.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "競馬AI観察室",
+        "url": "https://race-iq-ai.pages.dev/",
+        "description": "競馬予想をAIで比較し、人気馬偏重、期待値、回収率、外れ方まで記録する共同検証サイト。",
+        "inLanguage": "ja",
+        "publisher": {
+          "@type": "Organization",
+          "name": "競馬AI観察室"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#" aria-label="競馬AI観察室">
+        <span class="brand-mark">
+          <i data-lucide="activity"></i>
+        </span>
+        <span>競馬AI観察室</span>
+      </a>
+      <nav class="main-nav" aria-label="主要メニュー">
+        <a class="active" href="#home">ホーム</a>
+        <a href="#theme">実験テーマ</a>
+        <a href="#compare">AI比較</a>
+        <a href="#data">検証データ</a>
+        <a href="#insights">研究ログ</a>
+        <a href="#results">アーカイブ</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" type="button" title="検索" aria-label="検索">
+          <i data-lucide="search"></i>
+        </button>
+        <button class="icon-button" type="button" title="通知" aria-label="通知">
+          <i data-lucide="bell"></i>
+        </button>
+        <button class="icon-button" type="button" title="メニュー" aria-label="メニュー">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">AI予想を、ふたりで観察する実験場</p>
+          <h1>競馬予想を、AIの得意・苦手が見えるデータにする。</h1>
+          <p class="hero-lead">
+            「当たったか」だけで終わらせず、人気馬偏重、期待値、回収率、外れ方まで記録します。
+            どのAIがどんな条件で強いのかを、レースごとに比べていく企画です。
+          </p>
+          <div class="hero-tools" aria-label="企画の軸">
+            <article>
+              <i data-lucide="brain"></i>
+              <strong>AIのクセを比べる</strong>
+              <span>本命寄りか、妙味寄りかを記録</span>
+            </article>
+            <article>
+              <i data-lucide="chart-no-axes-combined"></i>
+              <strong>期待値を残す</strong>
+              <span>勝率だけでなく回収率も見る</span>
+            </article>
+            <article>
+              <i data-lucide="file-search"></i>
+              <strong>外れ方も学ぶ</strong>
+              <span>苦手条件を次の仮説に変える</span>
+            </article>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="競馬レースの写真">
+          <picture>
+            <source type="image/webp" srcset="assets/hero-race-800.webp 800w, assets/hero-race-1200.webp 1200w" sizes="(max-width: 720px) 100vw, 48vw" />
+            <img src="assets/hero-race.jpg" alt="競走馬と騎手が疾走する様子" width="1200" height="800" fetchpriority="high" decoding="async" />
+          </picture>
+          <div class="hero-live">
+            <span>LAB</span>
+            <strong>今週のAI検証を準備中</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section race-spotlight" id="theme">
+        <div class="section-heading">
+          <span class="heading-icon"><i data-lucide="calendar-days"></i></span>
+          <h2>今週の検証レース</h2>
+        </div>
+        <div class="spotlight-panel">
+          <div class="race-card">
+            <div class="race-title">
+              <span class="grade">G1</span>
+              <div>
+                <h3>日本ダービー</h3>
+                <p>東京競馬場　芝2400m　2026年6月28日（日）15:40 発走</p>
+              </div>
+            </div>
+            <div class="race-meta">
+              <div><span>今回の問い</span><strong>人気馬偏重は危険か</strong></div>
+              <div><span>見る指標</span><strong>期待値・回収率</strong></div>
+              <div><span>発走まで</span><strong id="countdown">23:59:59</strong></div>
+            </div>
+            <button class="outline-button" type="button">観察メモを開く</button>
+          </div>
+          <div class="popular">
+            <div class="mini-heading">市場の見立てとAIが見ている馬</div>
+            <div class="horse-rank">
+              <article><b>1</b><strong>サンライズジパング</strong><span>2.8</span></article>
+              <article><b>2</b><strong>ミラクルタイム</strong><span>4.6</span></article>
+              <article><b>3</b><strong>アーバンシック</strong><span>6.3</span></article>
+              <article><b>7</b><strong>シンエンペラー</strong><span>12.3</span></article>
+              <article><b>10</b><strong>サトノシュトラーセ</strong><span>21.4</span></article>
+            </div>
+            <button class="outline-button compact" type="button">全候補を比較する</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="section-heading">
+          <span class="heading-icon"><i data-lucide="file-search"></i></span>
+          <h2>この企画で大事にすること</h2>
+        </div>
+        <div class="research-grid">
+          <article class="research-card">
+            <strong>人気馬を探すだけにしない</strong>
+            <p>勝率が高くても、オッズが低すぎれば長期では沈む。AIが人気馬に寄りすぎていないかを見る。</p>
+          </article>
+          <article class="research-card">
+            <strong>期待値と回収率を並べる</strong>
+            <p>「当てた」よりも、なぜその馬に妙味があると判断したかを残す。</p>
+          </article>
+          <article class="research-card">
+            <strong>AIごとの得意条件を探す</strong>
+            <p>少頭数、荒れやすい条件、展開が読みやすいレースなど、AIの強い場面を分類する。</p>
+          </article>
+          <article class="research-card">
+            <strong>掛け金なしで検証する</strong>
+            <p>まずは紙上の12万円ルールで記録し、感情ではなくデータで振り返る。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="compare">
+        <div class="section-heading">
+          <span class="heading-icon"><i data-lucide="sparkles"></i></span>
+          <h2>AI予想比較</h2>
+        </div>
+        <div class="compare-grid">
+          <article class="prediction-card ai-a">
+            <div class="card-title">
+              <h3>AI A</h3>
+              <span>堅実・人気馬評価モデル</span>
+            </div>
+            <table>
+              <thead>
+                <tr><th>印</th><th>馬番</th><th>馬名</th><th>AIの見立て</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>◎</td><td>1</td><td>サンライズジパング</td><td>安定度 92</td></tr>
+                <tr><td>○</td><td>3</td><td>アーバンシック</td><td>東京適性 88</td></tr>
+                <tr><td>▲</td><td>2</td><td>ミラクルタイム</td><td>末脚 84</td></tr>
+                <tr><td>△</td><td>7</td><td>シンエンペラー</td><td>上振れ候補</td></tr>
+                <tr><td>☆</td><td>9</td><td>ダノンエアズロック</td><td>穴なら少額</td></tr>
+              </tbody>
+            </table>
+            <button class="outline-button blue" data-detail="A" type="button">AI A のクセを見る</button>
+          </article>
+          <div class="versus">VS</div>
+          <article class="prediction-card ai-b">
+            <div class="card-title">
+              <h3>AI B</h3>
+              <span>期待値・妙味探索モデル</span>
+            </div>
+            <table>
+              <thead>
+                <tr><th>印</th><th>馬番</th><th>馬名</th><th>AIの見立て</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>◎</td><td>2</td><td>ミラクルタイム</td><td>期待値 1.18</td></tr>
+                <tr><td>○</td><td>1</td><td>サンライズジパング</td><td>軸候補</td></tr>
+                <tr><td>▲</td><td>4</td><td>ダノンデサイル</td><td>展開利あり</td></tr>
+                <tr><td>△</td><td>3</td><td>アーバンシック</td><td>過剰人気注意</td></tr>
+                <tr><td>☆</td><td>10</td><td>サトノシュトラーセ</td><td>妙味枠</td></tr>
+              </tbody>
+            </table>
+            <button class="outline-button green" data-detail="B" type="button">AI B のクセを見る</button>
+          </article>
+        </div>
+        <aside class="analyst-note" aria-live="polite">
+          <div class="analyst-avatar">2</div>
+          <div>
+            <span>ふたりの研究メモ</span>
+            <strong>今回の仮説</strong>
+          </div>
+          <p id="ai-detail">
+            勝率の高い人気馬だけを拾うAIは見た目は当たりやすい。ただ、オッズが低すぎると回収率は下がる。今回は「人気馬を評価するAI」と「期待値を探すAI」の差を見ます。
+          </p>
+          <div class="keyword-list">
+            <span>人気馬偏重</span>
+            <span>期待値</span>
+            <span>回収率</span>
+            <span>外れ方</span>
+            <span>紙上検証</span>
+          </div>
+        </aside>
+      </section>
+
+      <section class="content-section" id="data">
+        <div class="section-heading">
+          <span class="heading-icon"><i data-lucide="line-chart"></i></span>
+          <h2>検証サマリー（直近30レース）</h2>
+        </div>
+        <div class="stats-layout">
+          <article class="stats-card blue-card">
+            <h3>AI A 観察結果</h3>
+            <div class="stat-row">
+              <div><span>的中率</span><strong>41.2%</strong></div>
+              <div><span>回収率</span><strong>86%</strong></div>
+              <div><span>期待値</span><strong>0.93</strong></div>
+            </div>
+            <svg class="sparkline" viewBox="0 0 320 110" role="img" aria-label="AI Aの回収率推移">
+              <path class="grid" d="M0 20H320M0 55H320M0 90H320"></path>
+              <path class="line blue-line" d="M0 44 L25 50 L50 46 L75 58 L100 61 L125 57 L150 69 L175 66 L200 72 L225 68 L250 76 L275 79 L300 74 L320 82"></path>
+            </svg>
+          </article>
+          <article class="stats-card green-card">
+            <h3>AI B 観察結果</h3>
+            <div class="stat-row">
+              <div><span>的中率</span><strong>24.8%</strong></div>
+              <div><span>回収率</span><strong>118%</strong></div>
+              <div><span>期待値</span><strong>1.12</strong></div>
+            </div>
+            <svg class="sparkline" viewBox="0 0 320 110" role="img" aria-label="AI Bの回収率推移">
+              <path class="grid" d="M0 20H320M0 55H320M0 90H320"></path>
+              <path class="line green-line" d="M0 78 L25 76 L50 58 L75 64 L100 61 L125 70 L150 54 L175 57 L200 48 L225 31 L250 44 L275 35 L300 39 L320 30"></path>
+            </svg>
+          </article>
+          <article class="compare-summary">
+            <h3>今の学び</h3>
+            <dl>
+              <div><dt>安定度</dt><dd><b>AI A</b><span>高い</span></dd></div>
+              <div><dt>妙味</dt><dd><b>AI B</b><span>高い</span></dd></div>
+              <div><dt>注意点</dt><dd><b>両方</b><span>過信しない</span></dd></div>
+            </dl>
+            <button class="outline-button blue" type="button">観察データをもっと見る</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="section-heading">
+          <span class="heading-icon"><i data-lucide="route"></i></span>
+          <h2>1レースごとの検証フロー</h2>
+        </div>
+        <ol class="timeline">
+          <li><i data-lucide="flag"></i><strong>STEP 1</strong><span>レース選定</span></li>
+          <li><i data-lucide="brain"></i><strong>STEP 2</strong><span>AIへ予想依頼</span></li>
+          <li><i data-lucide="database"></i><strong>STEP 3</strong><span>オッズ記録</span></li>
+          <li><i data-lucide="file-search"></i><strong>STEP 4</strong><span>仮説メモ</span></li>
+          <li><i data-lucide="trophy"></i><strong>STEP 5</strong><span>結果入力</span></li>
+          <li><i data-lucide="repeat"></i><strong>STEP 6</strong><span>得意苦手を更新</span></li>
+        </ol>
+      </section>
+
+      <section class="content-section" id="insights">
+        <div class="section-heading">
+          <span class="heading-icon"><i data-lucide="newspaper"></i></span>
+          <h2>研究ログ</h2>
+        </div>
+        <div class="article-grid">
+          <article class="article-card">
+            <picture>
+              <source type="image/webp" srcset="assets/race-track-900.webp" />
+              <img src="assets/race-track.jpg" alt="芝コースを走る競走馬" width="900" height="675" loading="lazy" decoding="async" />
+            </picture>
+            <span>仮説</span>
+            <h3>人気馬を拾うAIは本当に強いのか</h3>
+            <p>的中率は高く見えるが、低オッズ中心だと回収率は伸びにくい。人気偏重のラインを探る。</p>
+            <time datetime="2026-06-27">2026/06/27</time>
+          </article>
+          <article class="article-card data-art">
+            <div class="paper-chart">
+              <span></span><span></span><span></span>
+            </div>
+            <span>メモ</span>
+            <h3>勝率より期待値を見る、という考え方</h3>
+            <p>「当たりそう」ではなく「そのオッズなら買う価値があるか」をAIに説明させる。</p>
+            <time datetime="2026-06-27">2026/06/27</time>
+          </article>
+          <article class="article-card">
+            <picture>
+              <source type="image/webp" srcset="assets/hero-race-800.webp" />
+              <img src="assets/hero-race.jpg" alt="競走馬のスピード感ある写真" width="799" height="533" loading="lazy" decoding="async" />
+            </picture>
+            <span>得意</span>
+            <h3>AIが強そうな条件を分類する</h3>
+            <p>展開が読みやすいレース、過去傾向が素直な条件、人気と実力がズレる場面を記録。</p>
+            <time datetime="2026-06-26">2026/06/26</time>
+          </article>
+          <article class="article-card">
+            <picture>
+              <source type="image/webp" srcset="assets/course-900.webp" />
+              <img src="assets/course.jpg" alt="競馬場と街並みの風景" width="900" height="675" loading="lazy" decoding="async" />
+            </picture>
+            <span>苦手</span>
+            <h3>荒れるレースでAIは何を見落とすのか</h3>
+            <p>馬場悪化、展開の急変、過剰人気など、AIが外した理由を次回の観察項目にする。</p>
+            <time datetime="2026-06-25">2026/06/25</time>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section" id="results">
+        <div class="section-heading">
+          <span class="heading-icon"><i data-lucide="archive"></i></span>
+          <h2>検証アーカイブ</h2>
+          <a href="#">すべてのログを見る</a>
+        </div>
+        <div class="table-wrap">
+          <table class="archive-table">
+            <thead>
+              <tr>
+                <th>日付</th><th>レース</th><th>検証テーマ</th><th>AI A</th><th>AI B</th><th>観察結果</th><th>次回のルール</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>2026/06/19</td><td>ヴィクトリアマイル</td><td>人気馬偏重</td><td>的中率は高い</td><td>穴候補を拾う</td><td>AI Bの回収率が上</td><td>低オッズ単独評価に注意</td></tr>
+              <tr><td>2026/06/18</td><td>平安ステークス</td><td>ダート適性</td><td>指数上位を重視</td><td>展開利を重視</td><td>両AIとも軸は近い</td><td>展開コメントを残す</td></tr>
+              <tr><td>2026/06/12</td><td>京王杯SC</td><td>距離短縮</td><td>過去走を重視</td><td>オッズ妙味を重視</td><td>AI Aが安定</td><td>短距離は人気過信を下げる</td></tr>
+              <tr><td>2026/06/11</td><td>NHKマイルC</td><td>荒れ条件</td><td>本命寄り</td><td>相手広め</td><td>外れ方に差が出た</td><td>外した理由を3行で記録</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="guide">
+      <span>競馬AI観察室</span>
+      <span>AI予想の得意・苦手をふたりで記録する実験サイト</span>
+      <span>掲載データはデザイン確認用のサンプルです。</span>
+    </footer>
+  </body>
+</html>
