@@ -1,7 +1,7 @@
 {
-  "name": "競馬AI観察室",
-  "short_name": "競馬AI",
-  "description": "競馬予想AIの得意・苦手を、期待値・回収率・外れ方まで観察するサイト。",
+  "name": "Noxとよへ侍の競馬AI観察室",
+  "short_name": "NoxよへAI",
+  "description": "Noxとよへ侍が、競馬予想AIの得意・苦手を期待値・回収率・外れ方まで観察するサイト。",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

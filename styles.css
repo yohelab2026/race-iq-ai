@@ -1010,6 +1010,7 @@ th {
 
   .hero-lead {
     font-size: 14px;
+    overflow-wrap: anywhere;
   }
 
   .hero-tools,
