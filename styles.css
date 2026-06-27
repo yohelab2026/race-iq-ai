@@ -442,6 +442,49 @@ main {
   border-top: 1px solid var(--line);
 }
 
+.value-rank {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.value-rank article {
+  min-height: 116px;
+  display: grid;
+  align-content: start;
+  gap: 4px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.value-rank b {
+  color: var(--blue);
+  font-size: 22px;
+  line-height: 1;
+}
+
+.value-rank strong {
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.value-rank span {
+  color: #dc2727;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.value-rank em {
+  color: var(--muted);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
 .horse-rank article {
   min-height: 104px;
   display: grid;
@@ -1015,6 +1058,7 @@ th {
 
   .hero-tools,
   .horse-rank,
+  .value-rank,
   .stat-row,
   .article-grid,
   .research-grid,

@@ -1,10 +1,10 @@
 const detailText = {
-  A: "AI Aは人気上位や安定度の高い馬を拾いやすいモデル。的中率は高く見えやすい一方で、低オッズ中心になると回収率が伸びにくいかを観察します。",
-  B: "AI Bは期待値と妙味を重視するモデル。外れ方は大きくなりやすいけれど、人気と実力がズレた馬を拾えるかを検証します。"
+  A: "AI Aは堅実データ型。函館記念の⑤イガッチ、ラジオNIKKEI賞の⑤リッツパーティーのように、条件に合う軸候補を拾えるかを観察します。",
+  B: "AI Bは妙味・穴拾い型。①ルージュボヤージュ、②クカイリモク、①バルナバのように、オッズ込みで買う意味がある候補を拾えるかを検証します。"
 };
 
 function updateCountdown() {
-  const target = new Date("2026-06-28T15:40:00+09:00").getTime();
+  const target = new Date("2026-06-28T15:20:00+09:00").getTime();
   const now = Date.now();
   const diff = Math.max(0, target - now);
   const days = Math.floor(diff / 86400000);
