@@ -53,6 +53,7 @@
       </a>
       <nav class="main-nav" aria-label="主要メニュー">
         <a class="active" href="#home">ホーム</a>
+        <a href="#beginner">初心者向け</a>
         <a href="#learning">学習層</a>
         <a href="#theme">次回予想</a>
         <a href="#compare">AI比較</a>
@@ -79,7 +80,7 @@
           <h1>何度も疑って、いま出せる最高確率に寄せる。</h1>
           <p class="hero-lead">
             馬の気持ちは直接は読めません。だから、血統、近走、相手関係、馬場、脚質、斤量、オッズ、前回AIが外した理由を
-            ひとつずつ観察値に変換します。単勝1頭で60%や80%は盛りすぎなので、候補群で勝ち馬を拾う確率を最高化します。
+            ひとつずつ観察値に変換します。初心者でも見えるように、1頭勝負ではなく「勝ち馬を候補群に入れる確率」で70%以上を狙います。
           </p>
           <div class="hero-tools" aria-label="企画の軸">
             <article>
@@ -108,6 +109,31 @@
             <span>NEXT</span>
             <strong>最終監査: 上位5頭で勝ち馬捕捉81%</strong>
           </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="beginner">
+        <div class="section-heading">
+          <span class="heading-icon"><i data-lucide="badge-help"></i></span>
+          <h2>初心者向けの最終結論</h2>
+        </div>
+        <div class="research-grid">
+          <article class="research-card">
+            <strong>このサイトの「当たる」</strong>
+            <p>まずは1着馬がAIの候補群に入るかを見る。単勝1頭を当てる話と、候補群で拾う話を分ける。</p>
+          </article>
+          <article class="research-card">
+            <strong>1頭だけなら27%</strong>
+            <p>現時点の最高はフリッカージャブ。強いが、短距離ハンデ重賞で1頭だけ70%は作らない。</p>
+          </article>
+          <article class="research-card">
+            <strong>70%以上は4頭で作る</strong>
+            <p>フリッカージャブ、デアヴェローチェ、アンクルクロス、サウンドモリアーナで勝ち馬捕捉74%。</p>
+          </article>
+          <article class="research-card">
+            <strong>80%以上は5頭まで</strong>
+            <p>上位4頭にヤマニンアルリフラを足して81%。広げすぎると意味が薄いので、ここを上限にする。</p>
+          </article>
         </div>
       </section>
 
@@ -183,7 +209,7 @@
       <section class="content-section">
         <div class="section-heading">
           <span class="heading-icon"><i data-lucide="percent"></i></span>
-          <h2>勝てる可能性の上限設定</h2>
+          <h2>70%以上にする確率設計</h2>
         </div>
         <div class="table-wrap">
           <table class="archive-table probability-table">
@@ -193,12 +219,62 @@
               </tr>
             </thead>
             <tbody>
-              <tr><td>単勝1頭</td><td>27%</td><td>フリッカージャブ</td><td>市場評価と前走1200m勝ちを合わせた最高値。1頭で60%は出せない。</td></tr>
-              <tr><td>上位2頭で勝ち馬捕捉</td><td>51%</td><td>フリッカージャブ + デアヴェローチェ</td><td>勝つ可能性だけならここが中心。まだ60%には届かない。</td></tr>
-              <tr><td>上位4頭で勝ち馬捕捉</td><td>74%</td><td>フリッカージャブ + デアヴェローチェ + アンクルクロス + サウンドモリアーナ</td><td>60%を超える現実的ライン。候補を広げすぎずに確率を上げる。</td></tr>
-              <tr><td>上位5頭で勝ち馬捕捉</td><td>81%</td><td>上位4頭 + ヤマニンアルリフラ</td><td>80%を狙うならここまで。ただし「当たる保証」ではなく捕捉率の紙上推定。</td></tr>
+              <tr><td>1頭だけで当てる</td><td>27%</td><td>フリッカージャブ</td><td>いちばん勝つ可能性が高い1頭。ただし70%には届かない。</td></tr>
+              <tr><td>2頭まで広げる</td><td>51%</td><td>フリッカージャブ + デアヴェローチェ</td><td>中心2頭。まだ足りないので、初心者向けの結論にはしない。</td></tr>
+              <tr><td>4頭まで広げる</td><td>74%</td><td>フリッカージャブ + デアヴェローチェ + アンクルクロス + サウンドモリアーナ</td><td>70%以上を達成する本線。勝ち馬を拾いにいくならここ。</td></tr>
+              <tr><td>5頭まで広げる</td><td>81%</td><td>上位4頭 + ヤマニンアルリフラ</td><td>80%以上を狙う保険込み。広げすぎ防止の上限。</td></tr>
             </tbody>
           </table>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="section-heading">
+          <span class="heading-icon"><i data-lucide="list-checks"></i></span>
+          <h2>初心者でも迷わない見方</h2>
+        </div>
+        <div class="research-grid">
+          <article class="research-card">
+            <strong>◎は一番勝ちそうな馬</strong>
+            <p>今回はフリッカージャブ。AIが一番勝つ確率を高く見ている馬です。</p>
+          </article>
+          <article class="research-card">
+            <strong>○と▲は本命を倒す馬</strong>
+            <p>デアヴェローチェとアンクルクロス。◎が負けるなら、まずこの2頭を疑います。</p>
+          </article>
+          <article class="research-card">
+            <strong>△は70%に乗せる馬</strong>
+            <p>サウンドモリアーナ。ここまで入れると、勝ち馬を候補に入れる確率が74%まで上がります。</p>
+          </article>
+          <article class="research-card">
+            <strong>☆は80%の保険</strong>
+            <p>ヤマニンアルリフラ。昨年覇者の一発を消さず、81%の候補群に入れます。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="section-heading">
+          <span class="heading-icon"><i data-lucide="shield-check"></i></span>
+          <h2>当てるための最終チェック</h2>
+        </div>
+        <div class="research-grid">
+          <article class="research-card">
+            <strong>枠順が出たら再確認</strong>
+            <p>小倉1200mはスタートと位置取りが大事。外すならここで見落とす可能性がある。</p>
+          </article>
+          <article class="research-card">
+            <strong>馬場が高速なら本線維持</strong>
+            <p>フリッカージャブ、デアヴェローチェ、アンクルクロスを厚く見る。</p>
+          </article>
+          <article class="research-card">
+            <strong>荒れ馬場なら保険を上げる</strong>
+            <p>サウンドモリアーナとヤマニンアルリフラを下げすぎない。</p>
+          </article>
+          <article class="research-card">
+            <strong>人気が被りすぎたら期待値を分ける</strong>
+            <p>勝つ確率と買う価値は別。低オッズでも勝ち候補からは消さない。</p>
+          </article>
         </div>
       </section>
 
@@ -305,7 +381,7 @@
             <strong>今回の紙上結論</strong>
           </div>
           <p id="ai-detail">
-            最終監査では、単勝1頭の最高推定はフリッカージャブ27%。60%以上を狙うなら上位4頭、80%以上を狙うなら上位5頭まで広げます。これは紙上推定で、的中保証ではありません。
+            最終監査では、単勝1頭の最高推定はフリッカージャブ27%。70%以上を狙うなら上位4頭で74%、80%以上を狙うなら上位5頭で81%まで広げます。これは紙上推定で、的中保証ではありません。
           </p>
           <div class="keyword-list">
             <span>前走1着</span>
