@@ -485,6 +485,45 @@ main {
   line-height: 1.35;
 }
 
+.result-rank article {
+  min-height: 132px;
+}
+
+.result-rank .hit {
+  border-color: rgba(34, 156, 90, 0.45);
+  background: #f4fbf6;
+}
+
+.result-rank .learned {
+  border-color: rgba(216, 155, 28, 0.45);
+  background: #fffaf0;
+}
+
+.result-rank .miss {
+  border-color: rgba(220, 39, 39, 0.22);
+  background: #fffafa;
+}
+
+.result-rank .hit span {
+  color: var(--green);
+}
+
+.result-rank .learned span {
+  color: var(--gold);
+}
+
+.source-line {
+  clear: both;
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.source-line a {
+  color: var(--blue);
+}
+
 .horse-rank article {
   min-height: 104px;
   display: grid;
