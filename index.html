@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Noxとよへ侍の競馬AI観察室 | AI予想の得意・苦手を検証するラボ</title>
-    <meta name="description" content="Nox(ノクス)とよへ侍が、競馬予想AIの得意・苦手を期待値、回収率、外れ方まで記録する共同検証サイト。稼ぐためではなく、AIごとのクセを観察します。" />
+    <title>Noxとよへ侍の競馬AI観察室 | 北九州記念をAIで検証</title>
+    <meta name="description" content="Nox(ノクス)とよへ侍が、競馬予想AIの得意・苦手を期待値、血統、相手関係、馬場、外れ方まで記録する共同検証サイト。次回は北九州記念を紙上検証します。" />
     <meta name="robots" content="index,follow,max-image-preview:large" />
     <meta name="theme-color" content="#17233f" />
     <link rel="canonical" href="https://race-iq-ai.pages.dev/" />
@@ -12,7 +12,7 @@
     <link rel="manifest" href="site.webmanifest" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Noxとよへ侍の競馬AI観察室" />
-    <meta property="og:title" content="Noxとよへ侍の競馬AI観察室 | AI予想の得意・苦手を検証するラボ" />
+    <meta property="og:title" content="Noxとよへ侍の競馬AI観察室 | 北九州記念をAIで検証" />
     <meta property="og:description" content="Noxとよへ侍がAI予想を比較し、期待値・回収率・外れ方までレースごとに記録する競馬AI観察ラボ。" />
     <meta property="og:url" content="https://race-iq-ai.pages.dev/" />
     <meta property="og:image" content="https://race-iq-ai.pages.dev/assets/og-race-ai.webp" />
@@ -21,7 +21,7 @@
     <meta property="og:locale" content="ja_JP" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Noxとよへ侍の競馬AI観察室" />
-    <meta name="twitter:description" content="Noxとよへ侍が、競馬予想AIの得意・苦手を期待値・回収率・外れ方まで観察するサイト。" />
+    <meta name="twitter:description" content="北九州記念を、AIの学習仮説と期待値のズレまで含めて紙上検証します。" />
     <meta name="twitter:image" content="https://race-iq-ai.pages.dev/assets/og-race-ai.webp" />
     <link rel="preload" as="image" href="assets/hero-race-1200.webp" imagesrcset="assets/hero-race-800.webp 800w, assets/hero-race-1200.webp 1200w" imagesizes="(max-width: 720px) 100vw, 48vw" />
     <link rel="preconnect" href="https://unpkg.com" />
@@ -45,7 +45,7 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="#" aria-label="Noxとよへ侍の競馬AI観察室">
+      <a class="brand" href="#home" aria-label="Noxとよへ侍の競馬AI観察室">
         <span class="brand-mark">
           <i data-lucide="activity"></i>
         </span>
@@ -53,11 +53,11 @@
       </a>
       <nav class="main-nav" aria-label="主要メニュー">
         <a class="active" href="#home">ホーム</a>
-        <a href="#theme">実験テーマ</a>
+        <a href="#learning">学習層</a>
+        <a href="#theme">次回予想</a>
         <a href="#compare">AI比較</a>
         <a href="#data">検証データ</a>
-        <a href="#insights">研究ログ</a>
-        <a href="#results">アーカイブ</a>
+        <a href="results.html">結果アーカイブ</a>
       </nav>
       <div class="header-actions">
         <button class="icon-button" type="button" title="検索" aria-label="検索">
@@ -75,27 +75,27 @@
     <main id="home">
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">Noxとよへ侍、ふたりで観察するAI競馬実験</p>
-          <h1>競馬予想を、AIの得意・苦手が見えるデータにする。</h1>
+          <p class="eyebrow">Noxとよへ侍、外れ方まで学習するAI競馬実験</p>
+          <h1>競馬の流れをデータに彫り込んで、次の仮説を出す。</h1>
           <p class="hero-lead">
-            「当たったか」だけで終わらせません。Noxとよへ侍が、人気馬偏重、期待値、回収率、外れ方まで記録します。
-            どのAIがどんな条件で強いのかを、レースごとに比べていく企画です。
+            馬の気持ちは直接は読めません。だから、血統、近走、相手関係、馬場、脚質、斤量、オッズ、前回AIが外した理由を
+            ひとつずつ観察値に変換します。次回は北九州記念で、AIが人気に寄りすぎる癖を修正できるかを見ます。
           </p>
           <div class="hero-tools" aria-label="企画の軸">
             <article>
-              <i data-lucide="brain"></i>
-              <strong>AIのクセを比べる</strong>
-              <span>本命寄りか、妙味寄りかを記録</span>
+              <i data-lucide="database-zap"></i>
+              <strong>歴史と近走を入れる</strong>
+              <span>過去傾向と前走内容を分解</span>
             </article>
             <article>
-              <i data-lucide="chart-no-axes-combined"></i>
-              <strong>期待値を残す</strong>
-              <span>勝率だけでなく回収率も見る</span>
+              <i data-lucide="scan-heart"></i>
+              <strong>見えない要素を推定</strong>
+              <span>気配は調教・馬体・環境で読む</span>
             </article>
             <article>
-              <i data-lucide="file-search"></i>
-              <strong>外れ方も学ぶ</strong>
-              <span>苦手条件を次の仮説に変える</span>
+              <i data-lucide="repeat-2"></i>
+              <strong>外れ方を残す</strong>
+              <span>前回のミスを次回ルールへ変える</span>
             </article>
           </div>
         </div>
@@ -105,46 +105,75 @@
             <img src="assets/hero-race.jpg" alt="競走馬と騎手が疾走する様子" width="1200" height="800" fetchpriority="high" decoding="async" />
           </picture>
           <div class="hero-live">
-            <span>RESULT</span>
-            <strong>初回検証は単勝0/4、複勝回収率50%</strong>
+            <span>NEXT</span>
+            <strong>7/5 北九州記念 15:45 小倉芝1200m</strong>
           </div>
+        </div>
+      </section>
+
+      <section class="content-section" id="learning">
+        <div class="section-heading">
+          <span class="heading-icon"><i data-lucide="brain-circuit"></i></span>
+          <h2>予想前に彫り込むデータ層</h2>
+        </div>
+        <div class="research-grid">
+          <article class="research-card">
+            <strong>歴史データ</strong>
+            <p>北九州記念は1996年以降の結果と、2010年以降の小倉芝1200m重賞の流れを参照。高速決着と平坦適性を重く見る。</p>
+          </article>
+          <article class="research-card">
+            <strong>近年傾向</strong>
+            <p>2023年以降は前走1着馬が優勢。前走2着以下だけで買い上げる馬は、別の強い理由が必要。</p>
+          </article>
+          <article class="research-card">
+            <strong>馬の特性</strong>
+            <p>脚質、前走距離、馬体重、斤量、血統の短距離適性を点にする。気持ちは測れないので、調教・馬体・レース間隔で代替する。</p>
+          </article>
+          <article class="research-card">
+            <strong>AIの反省</strong>
+            <p>6/28は中穴を拾ったのに順位を上げきれなかった。今回は二桁オッズの前走勝ち馬を必ず上位候補に残す。</p>
+          </article>
         </div>
       </section>
 
       <section class="content-section race-spotlight" id="theme">
         <div class="section-heading">
           <span class="heading-icon"><i data-lucide="calendar-days"></i></span>
-          <h2>初回検証の結果</h2>
+          <h2>次回検証: 北九州記念</h2>
         </div>
         <div class="spotlight-panel">
           <div class="race-card">
             <div class="race-title">
               <span class="grade">G3</span>
               <div>
-                <h3>6/28 2重賞 振り返り</h3>
-                <p>ラジオNIKKEI賞 / 函館記念</p>
+                <h3>テレビ西日本賞 北九州記念</h3>
+                <p>2026年7月5日 / 小倉芝1200m / ハンデ / 15:45発走予定</p>
               </div>
             </div>
             <div class="race-meta">
-              <div><span>単勝</span><strong>0 / 4</strong></div>
-              <div><span>複勝</span><strong>1 / 4</strong></div>
-              <div><span>回収率</span><strong>50%</strong></div>
+              <div><span>今回の問い</span><strong>中穴昇格</strong></div>
+              <div><span>公式オッズ</span><strong>未確定</strong></div>
+              <div><span>紙上本命</span><strong>サウンド</strong></div>
             </div>
-            <button class="outline-button" type="button">外れも含めて記録済み</button>
+            <button class="outline-button" type="button">枠順・公式オッズ確定後に再計算</button>
           </div>
           <div class="popular">
-            <div class="mini-heading">実際の入線とAI評価のズレ</div>
-            <div class="value-rank result-rank">
-              <article class="miss"><b>負け</b><strong>福島 ⑬サノノグレーター</strong><span>1着 / 単勝5.4倍</span><em>評価を下げた勝ち馬。完全に取り逃がし。</em></article>
-              <article class="learned"><b>△</b><strong>福島 ⑧ディールメーカー</strong><span>2着 / 複勝260円</span><em>穴では拾ったが、上位推奨にできなかった。</em></article>
-              <article class="hit"><b>複勝</b><strong>福島 ⑤リッツパーティー</strong><span>3着 / 複勝200円</span><em>買い候補2位。単勝は外れ、複勝だけ回収。</em></article>
-              <article class="learned"><b>△</b><strong>函館 ②ファウストラーゼン</strong><span>1着 / 単勝14.0倍</span><em>4歳56kgの期待値馬。7位扱いが弱すぎた。</em></article>
-              <article class="miss"><b>抜け</b><strong>函館 ⑩ケリフレッドアスク</strong><span>2着 / 複勝330円</span><em>ランキング外。人気薄の拾い方を再設計。</em></article>
-              <article class="miss"><b>抜け</b><strong>函館 ③ピースワンデュック</strong><span>3着 / 複勝320円</span><em>ランキング外。函館の穴条件を軽視。</em></article>
-              <article class="miss"><b>外れ</b><strong>函館 ⑤イガッチ</strong><span>6着</span><em>本命AI候補。条件適合を過大評価。</em></article>
-              <article class="miss"><b>外れ</b><strong>福島 ①ルージュボヤージュ</strong><span>10着</span><em>穴候補4位。内枠と軽斤量を買いすぎた。</em></article>
+            <div class="mini-heading">現時点のAI紙上買い候補</div>
+            <div class="value-rank">
+              <article><b>◎</b><strong>サウンドモリアーナ</strong><span>想定14.0</span><em>前走芝1200m勝ち。人気寄りすぎない本命候補。</em></article>
+              <article><b>○</b><strong>デアヴェローチェ</strong><span>想定4.0</span><em>前走葵S勝ち。強いがオッズが下がれば期待値は薄くなる。</em></article>
+              <article><b>▲</b><strong>ランフォーヴァウ</strong><span>想定23.5</span><em>前走勝ちと二桁妙味。距離短縮リスク込みで残す。</em></article>
+              <article><b>△</b><strong>フリッカージャブ</strong><span>想定2.6</span><em>能力上位。ただし低オッズと大型馬データで買いすぎ注意。</em></article>
+              <article><b>☆</b><strong>アメリカンビキニ</strong><span>想定17.6</span><em>前走勝ちの勢い枠。芝替わりの扱いを当日まで監視。</em></article>
+              <article><b>注</b><strong>アンクルクロス</strong><span>想定6.5</span><em>前走1200mと馬体条件は追い風。前走2着以下の壁を確認。</em></article>
+              <article><b>警</b><strong>ヤマニンアルリフラ</strong><span>想定13.9</span><em>昨年覇者。相手関係は強いが近走と馬体条件で過信しない。</em></article>
+              <article><b>穴</b><strong>アブキールベイ</strong><span>想定25.1</span><em>昨年3着の因縁枠。前走大敗からの巻き返しだけを拾う。</em></article>
             </div>
-            <p class="source-line">結果確認: <a href="https://sports.yahoo.co.jp/keiba/race/result/2603020211" target="_blank" rel="noreferrer">ラジオNIKKEI賞</a> / <a href="https://sports.yahoo.co.jp/keiba/race/result/2602010611" target="_blank" rel="noreferrer">函館記念</a></p>
+            <p class="source-line">
+              参照: <a href="https://www.jra.go.jp/keiba/calendar2026/2026/7/0705.html" target="_blank" rel="noreferrer">JRA開催日程</a> /
+              <a href="https://race.netkeiba.com/special/index.html?id=0083" target="_blank" rel="noreferrer">netkeiba北九州記念特集</a> /
+              <a href="https://umanity.jp/racedata/race_newsdet.php?nid=11872910" target="_blank" rel="noreferrer">ウマニティ重賞データ</a>
+            </p>
           </div>
         </div>
       </section>
@@ -152,24 +181,24 @@
       <section class="content-section">
         <div class="section-heading">
           <span class="heading-icon"><i data-lucide="file-search"></i></span>
-          <h2>今回の反省で更新すること</h2>
+          <h2>今回の予測ルール</h2>
         </div>
         <div class="research-grid">
           <article class="research-card">
-            <strong>「条件に合う人気寄り」を上げすぎない</strong>
-            <p>イガッチ、フィーリウス、リッツパーティーを上げたが単勝は0。条件一致だけで本命にしない。</p>
+            <strong>前走1着を基準点にする</strong>
+            <p>デアヴェローチェ、フリッカージャブ、サウンドモリアーナ、ランフォーヴァウをまず上位母集団に置く。</p>
           </article>
           <article class="research-card">
-            <strong>△の中から買い候補へ昇格する基準を作る</strong>
-            <p>ファウストラーゼンとディールメーカーは拾えていた。問題は順位付けの弱さ。</p>
+            <strong>二桁オッズを捨てない</strong>
+            <p>前回のファウストラーゼン取り逃がし対策。サウンドモリアーナ、ランフォーヴァウ、アブキールベイを残す。</p>
           </article>
           <article class="research-card">
-            <strong>二桁オッズの期待値馬を別枠で残す</strong>
-            <p>14.0倍の勝ち馬を7位扱いにしたのが痛い。妙味枠は上位3頭に最低1頭入れる。</p>
+            <strong>低オッズは期待値で減点</strong>
+            <p>フリッカージャブは能力上位でも、2倍台なら紙上単勝の旨味は薄い。買い候補は別枠にする。</p>
           </article>
           <article class="research-card">
-            <strong>単勝だけでなく複勝回収も見る</strong>
-            <p>今回は単勝0/4、複勝1/4で回収率50%。外れ方も次回ルールに変換する。</p>
+            <strong>確定後に上書きする</strong>
+            <p>枠順、馬場、斤量、最終追い切り、当日オッズを入れたら、印は変えていい。固定しないのが今回のルール。</p>
           </article>
         </div>
       </section>
@@ -177,64 +206,64 @@
       <section class="content-section" id="compare">
         <div class="section-heading">
           <span class="heading-icon"><i data-lucide="sparkles"></i></span>
-          <h2>AI予想の反省</h2>
+          <h2>AI比較</h2>
         </div>
         <div class="compare-grid">
           <article class="prediction-card ai-a">
             <div class="card-title">
               <h3>AI A</h3>
-              <span>堅実データ型の失敗</span>
+              <span>能力・近走重視</span>
             </div>
             <table>
               <thead>
-                <tr><th>評価</th><th>レース</th><th>馬</th><th>結果</th></tr>
+                <tr><th>印</th><th>馬</th><th>根拠</th><th>注意</th></tr>
               </thead>
               <tbody>
-                <tr><td>本命</td><td>函館記念</td><td>⑤イガッチ</td><td>6着</td></tr>
-                <tr><td>堅実</td><td>ラジオNIKKEI賞</td><td>⑤リッツパーティー</td><td>3着</td></tr>
-                <tr><td>期待</td><td>函館記念</td><td>⑭フィーリウス</td><td>13着</td></tr>
-                <tr><td>軽視</td><td>ラジオNIKKEI賞</td><td>⑬サノノグレーター</td><td>1着</td></tr>
-                <tr><td>反省</td><td>共通</td><td>条件一致馬</td><td>過大評価</td></tr>
+                <tr><td>◎</td><td>デアヴェローチェ</td><td>葵S勝ち / 1200m適性</td><td>古馬初対戦</td></tr>
+                <tr><td>○</td><td>フリッカージャブ</td><td>鞍馬S勝ち / 平坦適性</td><td>低オッズ</td></tr>
+                <tr><td>▲</td><td>アンクルクロス</td><td>1200m組 / 条件合う</td><td>前走2着以下</td></tr>
+                <tr><td>△</td><td>ヨシノイースター</td><td>過去2年2着の因縁</td><td>8歳 / 距離ローテ</td></tr>
+                <tr><td>保留</td><td>ヤマニンアルリフラ</td><td>昨年覇者</td><td>近走負け</td></tr>
               </tbody>
             </table>
-            <button class="outline-button blue" data-detail="A" type="button">AI A のクセを見る</button>
+            <button class="outline-button blue" data-detail="A" type="button">AI A の見方</button>
           </article>
           <div class="versus">VS</div>
           <article class="prediction-card ai-b">
             <div class="card-title">
               <h3>AI B</h3>
-              <span>妙味・穴拾い型の課題</span>
+              <span>期待値・中穴重視</span>
             </div>
             <table>
               <thead>
-                <tr><th>評価</th><th>レース</th><th>馬</th><th>結果</th></tr>
+                <tr><th>印</th><th>馬</th><th>根拠</th><th>注意</th></tr>
               </thead>
               <tbody>
-                <tr><td>△</td><td>函館記念</td><td>②ファウストラーゼン</td><td>1着</td></tr>
-                <tr><td>△</td><td>ラジオNIKKEI賞</td><td>⑧ディールメーカー</td><td>2着</td></tr>
-                <tr><td>穴候補</td><td>ラジオNIKKEI賞</td><td>①ルージュボヤージュ</td><td>10着</td></tr>
-                <tr><td>抜け</td><td>函館記念</td><td>⑩ケリフレッドアスク</td><td>2着</td></tr>
-                <tr><td>反省</td><td>共通</td><td>二桁オッズ馬</td><td>順位付け不足</td></tr>
+                <tr><td>◎</td><td>サウンドモリアーナ</td><td>前走1200m勝ち / 14倍想定</td><td>相手強化</td></tr>
+                <tr><td>○</td><td>ランフォーヴァウ</td><td>前走勝ち / 23倍想定</td><td>1200m替わり</td></tr>
+                <tr><td>▲</td><td>アメリカンビキニ</td><td>前走勝ち / 17倍想定</td><td>芝適性確認</td></tr>
+                <tr><td>△</td><td>アブキールベイ</td><td>昨年3着 / 25倍想定</td><td>前走大敗</td></tr>
+                <tr><td>押さえ</td><td>デアヴェローチェ</td><td>能力は上位</td><td>妙味薄め</td></tr>
               </tbody>
             </table>
-            <button class="outline-button green" data-detail="B" type="button">AI B のクセを見る</button>
+            <button class="outline-button green" data-detail="B" type="button">AI B の見方</button>
           </article>
         </div>
         <aside class="analyst-note" aria-live="polite">
-          <div class="analyst-avatar">2</div>
+          <div class="analyst-avatar">N</div>
           <div>
             <span>Noxとよへ侍の研究メモ</span>
-            <strong>今回の仮説</strong>
+            <strong>今回の紙上結論</strong>
           </div>
           <p id="ai-detail">
-            単勝ランキングは外れ。拾えていた穴を買い候補上位にできなかったのが一番の反省です。次回は「△評価の中穴」を自動で再昇格するルールを作ります。
+            今の暫定本命はサウンドモリアーナ。理由は「前走芝1200m勝ち」と「想定14倍」の両立です。デアヴェローチェは最も素直に強い候補ですが、低オッズなら検証上の期待値は下げます。
           </p>
           <div class="keyword-list">
-            <span>単勝0/4</span>
-            <span>複勝1/4</span>
-            <span>回収率50%</span>
-            <span>穴の順位付け</span>
-            <span>次回ルール化</span>
+            <span>前走1着</span>
+            <span>芝1200m</span>
+            <span>二桁オッズ</span>
+            <span>小倉平坦</span>
+            <span>枠順待ち</span>
           </div>
         </aside>
       </section>
@@ -242,41 +271,41 @@
       <section class="content-section" id="data">
         <div class="section-heading">
           <span class="heading-icon"><i data-lucide="line-chart"></i></span>
-          <h2>初回検証サマリー（6/28）</h2>
+          <h2>成長中のAIデータ</h2>
         </div>
         <div class="stats-layout">
           <article class="stats-card blue-card">
-            <h3>買い候補4頭</h3>
+            <h3>今回取り込んだ材料</h3>
             <div class="stat-row">
-              <div><span>単勝</span><strong>0/4</strong></div>
-              <div><span>複勝</span><strong>1/4</strong></div>
-              <div><span>回収率</span><strong>50%</strong></div>
+              <div><span>歴史</span><strong>30年</strong></div>
+              <div><span>近年傾向</span><strong>3年</strong></div>
+              <div><span>登録馬</span><strong>13頭</strong></div>
             </div>
-            <svg class="sparkline" viewBox="0 0 320 110" role="img" aria-label="AI Aの回収率推移">
+            <svg class="sparkline" viewBox="0 0 320 110" role="img" aria-label="学習材料の積み上げ">
               <path class="grid" d="M0 20H320M0 55H320M0 90H320"></path>
-              <path class="line blue-line" d="M0 44 L25 50 L50 46 L75 58 L100 61 L125 57 L150 69 L175 66 L200 72 L225 68 L250 76 L275 79 L300 74 L320 82"></path>
+              <path class="line blue-line" d="M0 82 L32 74 L64 69 L96 63 L128 54 L160 51 L192 44 L224 38 L256 30 L288 26 L320 18"></path>
             </svg>
           </article>
           <article class="stats-card green-card">
-            <h3>拾えていた材料</h3>
+            <h3>前回からの修正</h3>
             <div class="stat-row">
-              <div><span>勝ち馬</span><strong>②</strong></div>
-              <div><span>2着馬</span><strong>⑧</strong></div>
-              <div><span>問題</span><strong>順位</strong></div>
+              <div><span>中穴</span><strong>昇格</strong></div>
+              <div><span>低オッズ</span><strong>減点</strong></div>
+              <div><span>外れ方</span><strong>保存</strong></div>
             </div>
-            <svg class="sparkline" viewBox="0 0 320 110" role="img" aria-label="AI Bの回収率推移">
+            <svg class="sparkline" viewBox="0 0 320 110" role="img" aria-label="AI修正ルール">
               <path class="grid" d="M0 20H320M0 55H320M0 90H320"></path>
-              <path class="line green-line" d="M0 78 L25 76 L50 58 L75 64 L100 61 L125 70 L150 54 L175 57 L200 48 L225 31 L250 44 L275 35 L300 39 L320 30"></path>
+              <path class="line green-line" d="M0 76 L28 80 L56 72 L84 70 L112 58 L140 62 L168 45 L196 49 L224 36 L252 42 L280 29 L320 25"></path>
             </svg>
           </article>
           <article class="compare-summary">
-            <h3>次回ルール</h3>
+            <h3>次の上書き条件</h3>
             <dl>
-              <div><dt>二桁オッズ</dt><dd><b>昇格</b><span>最低1頭</span></dd></div>
-              <div><dt>△評価</dt><dd><b>再評価</b><span>買い候補へ</span></dd></div>
-              <div><dt>58kg組</dt><dd><b>減点</b><span>明示する</span></dd></div>
+              <div><dt>枠順</dt><dd><b>待ち</b><span>内外差</span></dd></div>
+              <div><dt>馬場</dt><dd><b>待ち</b><span>高速/荒れ</span></dd></div>
+              <div><dt>公式オッズ</dt><dd><b>待ち</b><span>期待値</span></dd></div>
             </dl>
-            <button class="outline-button blue" type="button">反省を次回予想へ反映</button>
+            <a class="outline-button blue" href="results.html">6/28の結果を見る</a>
           </article>
         </div>
       </section>
@@ -287,12 +316,12 @@
           <h2>1レースごとの検証フロー</h2>
         </div>
         <ol class="timeline">
-          <li><i data-lucide="flag"></i><strong>STEP 1</strong><span>レース選定</span></li>
-          <li><i data-lucide="brain"></i><strong>STEP 2</strong><span>AIへ予想依頼</span></li>
-          <li><i data-lucide="database"></i><strong>STEP 3</strong><span>オッズ記録</span></li>
-          <li><i data-lucide="file-search"></i><strong>STEP 4</strong><span>仮説メモ</span></li>
-          <li><i data-lucide="trophy"></i><strong>STEP 5</strong><span>結果入力</span></li>
-          <li><i data-lucide="repeat"></i><strong>STEP 6</strong><span>得意苦手を更新</span></li>
+          <li><i data-lucide="database"></i><strong>STEP 1</strong><span>履歴を入れる</span></li>
+          <li><i data-lucide="heart-pulse"></i><strong>STEP 2</strong><span>特性を読む</span></li>
+          <li><i data-lucide="users"></i><strong>STEP 3</strong><span>相手関係</span></li>
+          <li><i data-lucide="cloud-sun"></i><strong>STEP 4</strong><span>環境確認</span></li>
+          <li><i data-lucide="sparkles"></i><strong>STEP 5</strong><span>AI比較</span></li>
+          <li><i data-lucide="repeat"></i><strong>STEP 6</strong><span>結果で更新</span></li>
         </ol>
       </section>
 
@@ -308,62 +337,39 @@
               <img src="assets/race-track.jpg" alt="芝コースを走る競走馬" width="900" height="675" loading="lazy" decoding="async" />
             </picture>
             <span>仮説</span>
-            <h3>人気馬を拾うAIは本当に強いのか</h3>
-            <p>的中率は高く見えるが、低オッズ中心だと回収率は伸びにくい。人気偏重のラインを探る。</p>
-            <time datetime="2026-06-27">2026/06/27</time>
+            <h3>馬の気持ちは、観察できる代理指標に変える</h3>
+            <p>気配、輸送、間隔、馬体、調教、騎手コメントを点にして、読めない部分を読める形へ寄せる。</p>
+            <time datetime="2026-06-28">2026/06/28</time>
           </article>
           <article class="article-card data-art">
             <div class="paper-chart">
               <span></span><span></span><span></span>
             </div>
-            <span>メモ</span>
-            <h3>勝率より期待値を見る、という考え方</h3>
-            <p>「当たりそう」ではなく「そのオッズなら買う価値があるか」をAIに説明させる。</p>
-            <time datetime="2026-06-27">2026/06/27</time>
+            <span>反省</span>
+            <h3>拾った穴を上位にできなかった問題</h3>
+            <p>6/28はファウストラーゼンを△で拾ったのに7位扱い。今回は中穴昇格ルールを入れる。</p>
+            <time datetime="2026-06-28">2026/06/28</time>
           </article>
           <article class="article-card">
             <picture>
               <source type="image/webp" srcset="assets/hero-race-800.webp" />
               <img src="assets/hero-race.jpg" alt="競走馬のスピード感ある写真" width="799" height="533" loading="lazy" decoding="async" />
             </picture>
-            <span>得意</span>
-            <h3>AIが強そうな条件を分類する</h3>
-            <p>展開が読みやすいレース、過去傾向が素直な条件、人気と実力がズレる場面を記録。</p>
-            <time datetime="2026-06-26">2026/06/26</time>
+            <span>血統</span>
+            <h3>短距離血統と平坦小倉の相性を見る</h3>
+            <p>1200mで前に行けるスピード、平坦で止まらない持続力、母系の短距離色を別々に記録。</p>
+            <time datetime="2026-06-28">2026/06/28</time>
           </article>
           <article class="article-card">
             <picture>
               <source type="image/webp" srcset="assets/course-900.webp" />
               <img src="assets/course.jpg" alt="競馬場と街並みの風景" width="900" height="675" loading="lazy" decoding="async" />
             </picture>
-            <span>苦手</span>
-            <h3>荒れるレースでAIは何を見落とすのか</h3>
-            <p>馬場悪化、展開の急変、過剰人気など、AIが外した理由を次回の観察項目にする。</p>
-            <time datetime="2026-06-25">2026/06/25</time>
+            <span>環境</span>
+            <h3>枠順・馬場・時計で最終印を変える</h3>
+            <p>北九州記念は高速決着が多い。雨や荒れ馬場になったら、スピードだけの評価を下げる。</p>
+            <time datetime="2026-06-28">2026/06/28</time>
           </article>
-        </div>
-      </section>
-
-      <section class="content-section" id="results">
-        <div class="section-heading">
-          <span class="heading-icon"><i data-lucide="archive"></i></span>
-          <h2>検証アーカイブ</h2>
-          <a href="#">すべてのログを見る</a>
-        </div>
-        <div class="table-wrap">
-          <table class="archive-table">
-            <thead>
-              <tr>
-                <th>日付</th><th>レース</th><th>検証テーマ</th><th>AI A</th><th>AI B</th><th>観察結果</th><th>次回のルール</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td>2026/06/19</td><td>ヴィクトリアマイル</td><td>人気馬偏重</td><td>的中率は高い</td><td>穴候補を拾う</td><td>AI Bの回収率が上</td><td>低オッズ単独評価に注意</td></tr>
-              <tr><td>2026/06/18</td><td>平安ステークス</td><td>ダート適性</td><td>指数上位を重視</td><td>展開利を重視</td><td>両AIとも軸は近い</td><td>展開コメントを残す</td></tr>
-              <tr><td>2026/06/12</td><td>京王杯SC</td><td>距離短縮</td><td>過去走を重視</td><td>オッズ妙味を重視</td><td>AI Aが安定</td><td>短距離は人気過信を下げる</td></tr>
-              <tr><td>2026/06/11</td><td>NHKマイルC</td><td>荒れ条件</td><td>本命寄り</td><td>相手広め</td><td>外れ方に差が出た</td><td>外した理由を3行で記録</td></tr>
-            </tbody>
-          </table>
         </div>
       </section>
     </main>
@@ -371,7 +377,7 @@
     <footer class="site-footer" id="guide">
       <span>Noxとよへ侍の競馬AI観察室</span>
       <span>AI予想の得意・苦手をNoxとよへ侍で記録する実験サイト</span>
-      <span>掲載データはデザイン確認用のサンプルです。</span>
+      <span>紙上検証であり、的中や利益を保証するものではありません。</span>
     </footer>
   </body>
 </html>

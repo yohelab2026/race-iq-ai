@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>検証結果アーカイブ | Noxとよへ侍の競馬AI観察室</title>
+    <meta name="description" content="Noxとよへ侍の競馬AI観察室の結果アーカイブ。6月28日のラジオNIKKEI賞と函館記念の当たり外れ、回収率、AIの反省点を記録。" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="theme-color" content="#17233f" />
+    <link rel="canonical" href="https://race-iq-ai.pages.dev/results.html" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="site.webmanifest" />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Noxとよへ侍の競馬AI観察室" />
+    <meta property="og:title" content="検証結果アーカイブ | Noxとよへ侍の競馬AI観察室" />
+    <meta property="og:description" content="6月28日の初回検証は単勝0/4、複勝1/4。外れ方も含めて次回ルールへ変換します。" />
+    <meta property="og:url" content="https://race-iq-ai.pages.dev/results.html" />
+    <meta property="og:image" content="https://race-iq-ai.pages.dev/assets/og-race-ai.webp" />
+    <meta property="og:locale" content="ja_JP" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script defer src="app.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Noxとよへ侍の競馬AI観察室">
+        <span class="brand-mark">
+          <i data-lucide="activity"></i>
+        </span>
+        <span>Noxとよへ侍の競馬AI観察室</span>
+      </a>
+      <nav class="main-nav" aria-label="主要メニュー">
+        <a href="index.html">ホーム</a>
+        <a href="index.html#learning">学習層</a>
+        <a href="index.html#theme">次回予想</a>
+        <a href="index.html#compare">AI比較</a>
+        <a class="active" href="results.html">結果アーカイブ</a>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-button" type="button" title="検索" aria-label="検索">
+          <i data-lucide="search"></i>
+        </button>
+        <button class="icon-button" type="button" title="通知" aria-label="通知">
+          <i data-lucide="bell"></i>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">結果アーカイブ</p>
+          <h1>当たりも外れも、次のAIデータに変える。</h1>
+          <p class="hero-lead">
+            6月28日の初回検証は、単勝的中0/4。複勝はリッツパーティーだけ拾えて回収率50%でした。
+            ただし、ファウストラーゼンとディールメーカーを△では見つけていたので、課題は「拾った穴を上位にできなかったこと」です。
+          </p>
+          <div class="hero-tools" aria-label="結果サマリー">
+            <article>
+              <i data-lucide="circle-x"></i>
+              <strong>単勝0/4</strong>
+              <span>買い候補は勝ち切れず</span>
+            </article>
+            <article>
+              <i data-lucide="circle-check"></i>
+              <strong>複勝1/4</strong>
+              <span>リッツパーティー3着</span>
+            </article>
+            <article>
+              <i data-lucide="rotate-ccw"></i>
+              <strong>回収率50%</strong>
+              <span>400円想定投資で200円回収</span>
+            </article>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="競馬レースの写真">
+          <picture>
+            <source type="image/webp" srcset="assets/hero-race-800.webp 800w, assets/hero-race-1200.webp 1200w" sizes="(max-width: 720px) 100vw, 48vw" />
+            <img src="assets/hero-race.jpg" alt="競走馬と騎手が疾走する様子" width="1200" height="800" fetchpriority="high" decoding="async" />
+          </picture>
+          <div class="hero-live">
+            <span>RESULT</span>
+            <strong>6/28 初回検証 単勝0/4</strong>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section race-spotlight">
+        <div class="section-heading">
+          <span class="heading-icon"><i data-lucide="archive"></i></span>
+          <h2>6/28 初回検証の結果</h2>
+          <a href="index.html">トップへ戻る</a>
+        </div>
+        <div class="spotlight-panel">
+          <div class="race-card">
+            <div class="race-title">
+              <span class="grade">G3</span>
+              <div>
+                <h3>ラジオNIKKEI賞 / 函館記念</h3>
+                <p>2026年6月28日 / 2重賞をAI比較</p>
+              </div>
+            </div>
+            <div class="race-meta">
+              <div><span>単勝</span><strong>0 / 4</strong></div>
+              <div><span>複勝</span><strong>1 / 4</strong></div>
+              <div><span>回収率</span><strong>50%</strong></div>
+            </div>
+            <button class="outline-button" type="button">外れも含めて保存済み</button>
+          </div>
+          <div class="popular">
+            <div class="mini-heading">実際の入線とAI評価のズレ</div>
+            <div class="value-rank result-rank">
+              <article class="miss"><b>負け</b><strong>福島 ⑬サノノグレーター</strong><span>1着 / 単勝5.4倍</span><em>評価を下げた勝ち馬。完全に取り逃がし。</em></article>
+              <article class="learned"><b>△</b><strong>福島 ⑧ディールメーカー</strong><span>2着 / 複勝260円</span><em>穴では拾ったが、上位推奨にできなかった。</em></article>
+              <article class="hit"><b>複勝</b><strong>福島 ⑤リッツパーティー</strong><span>3着 / 複勝200円</span><em>買い候補2位。単勝は外れ、複勝だけ回収。</em></article>
+              <article class="learned"><b>△</b><strong>函館 ②ファウストラーゼン</strong><span>1着 / 単勝14.0倍</span><em>4歳56kgの期待値馬。7位扱いが弱すぎた。</em></article>
+              <article class="miss"><b>抜け</b><strong>函館 ⑩ケリフレッドアスク</strong><span>2着 / 複勝330円</span><em>ランキング外。人気薄の拾い方を再設計。</em></article>
+              <article class="miss"><b>抜け</b><strong>函館 ③ピースワンデュック</strong><span>3着 / 複勝320円</span><em>ランキング外。函館の穴条件を軽視。</em></article>
+              <article class="miss"><b>外れ</b><strong>函館 ⑤イガッチ</strong><span>6着</span><em>本命AI候補。条件適合を過大評価。</em></article>
+              <article class="miss"><b>外れ</b><strong>福島 ①ルージュボヤージュ</strong><span>10着</span><em>穴候補4位。内枠と軽斤量を買いすぎた。</em></article>
+            </div>
+            <p class="source-line">結果確認: <a href="https://sports.yahoo.co.jp/keiba/race/result/2603020211" target="_blank" rel="noreferrer">ラジオNIKKEI賞</a> / <a href="https://sports.yahoo.co.jp/keiba/race/result/2602010611" target="_blank" rel="noreferrer">函館記念</a></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="section-heading">
+          <span class="heading-icon"><i data-lucide="file-search"></i></span>
+          <h2>この結果から学習したこと</h2>
+        </div>
+        <div class="research-grid">
+          <article class="research-card">
+            <strong>人気寄りを上げすぎない</strong>
+            <p>イガッチ、フィーリウス、リッツパーティーを上げたが単勝は0。条件一致だけで本命にしない。</p>
+          </article>
+          <article class="research-card">
+            <strong>△の中穴を昇格する</strong>
+            <p>ファウストラーゼンとディールメーカーは拾えていた。問題は順位付けの弱さ。</p>
+          </article>
+          <article class="research-card">
+            <strong>二桁オッズを別枠で残す</strong>
+            <p>14.0倍の勝ち馬を7位扱いにしたのが痛い。妙味枠は上位3頭に最低1頭入れる。</p>
+          </article>
+          <article class="research-card">
+            <strong>外れ方を保存する</strong>
+            <p>単勝0/4、複勝1/4、回収率50%。数字だけでなく、なぜ拾えなかったかを次回へ渡す。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="section-heading">
+          <span class="heading-icon"><i data-lucide="table-2"></i></span>
+          <h2>検証ログ</h2>
+        </div>
+        <div class="table-wrap">
+          <table class="archive-table">
+            <thead>
+              <tr>
+                <th>日付</th><th>レース</th><th>買い候補</th><th>結果</th><th>回収</th><th>次回へ渡すルール</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>2026/06/28</td><td>函館記念</td><td>⑤イガッチ</td><td>6着</td><td>0円</td><td>条件一致だけの本命を減点</td></tr>
+              <tr><td>2026/06/28</td><td>ラジオNIKKEI賞</td><td>⑤リッツパーティー</td><td>3着</td><td>複勝200円</td><td>複勝評価も保存</td></tr>
+              <tr><td>2026/06/28</td><td>函館記念</td><td>⑭フィーリウス</td><td>13着</td><td>0円</td><td>人気寄りの過大評価を下げる</td></tr>
+              <tr><td>2026/06/28</td><td>ラジオNIKKEI賞</td><td>①ルージュボヤージュ</td><td>10着</td><td>0円</td><td>軽斤量だけで買わない</td></tr>
+              <tr><td>2026/06/28</td><td>函館記念</td><td>②ファウストラーゼン</td><td>1着</td><td>候補7位</td><td>二桁オッズの△を上位再評価</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Noxとよへ侍の競馬AI観察室</span>
+      <span>結果も外れ方も次回のAIデータへ変換します。</span>
+      <span>紙上検証であり、的中や利益を保証するものではありません。</span>
+    </footer>
+  </body>
+</html>
